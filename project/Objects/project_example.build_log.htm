@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Harvie Sorroway, Microsoft, LIC=D0D7S-LJUTF-JJ56S-LSEZU-KMD3X-E19U2
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.28.0.0
+Toolchain Path:  G:\Keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.31.18.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+C:\Users\19341\Desktop\DGI2.0\project\project_example.uvprojx
+Project File Date:  03/11/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'G:\Keil\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling pid_caculate_task.c...
+..\task\src\pid_caculate_task.c(21): warning:  #223-D: function "firstOrderFilter_init" declared implicitly
+  	firstOrderFilter_init(&filter2,1,1);
+..\task\src\pid_caculate_task.c(25): error:  #20: identifier "chassis_speed_pid" is undefined
+  		pid_init(&chassis_speed_pid[i],FloatArray_SpeedInit[0],FloatArray_SpeedInit[1],FloatArray_SpeedInit[2],10000,8000);
+..\task\src\pid_caculate_task.c(27): error:  #20: identifier "chassis_current_pid" is undefined
+  		pid_init(&chassis_current_pid[i],FloatArray_CurrentInit[0],FloatArray_CurrentInit[1],FloatArray_CurrentInit[2],10000,8000);
+..\task\src\pid_caculate_task.c(32): error:  #20: identifier "m2006_position_pid_FollowChassis" is undefined
+  		pid_init(&m2006_position_pid_FollowChassis[i],FloatArray_GimbalCoefficients_position[0],FloatArray_GimbalCoefficients_position[1],FloatArray_GimbalCoefficients_position[2],15000,8000);
+..\task\src\pid_caculate_task.c(34): error:  #20: identifier "m2006_speed_pid_FollowChassis" is undefined
+  		pid_init(&m2006_speed_pid_FollowChassis[i],FloatArray_GimbalCoefficients_speed[0],FloatArray_GimbalCoefficients_speed[1],FloatArray_GimbalCoefficients_speed[2],15000,8000);
+..\task\src\pid_caculate_task.c(36): error:  #20: identifier "m2006_current_pid_FollowChassis" is undefined
+  		pid_init(&m2006_current_pid_FollowChassis[i],FloatArray_GimbalCoefficients_current[0],FloatArray_GimbalCoefficients_current[1],FloatArray_GimbalCoefficients_current[2],15000,8000);
+..\task\src\pid_caculate_task.c(55): error:  #20: identifier "chassis_speed_pid" is undefined
+  				pid_caculate_position(&chassis_speed_pid[i],DataCollection.Data_ChassisAimSpeed[i],DataCollection.Data_m3508[i].moto_speed);
+..\task\src\pid_caculate_task.c(56): error:  #20: identifier "chassis_current_pid" is undefined
+  				pid_caculate_position(&chassis_current_pid[i],chassis_speed_pid[i].OUT,DataCollection.Data_m3508[i].moto_current);
+..\task\src\pid_caculate_task.c(64): warning:  #223-D: function "firstOrderFilter_caculate" declared implicitly
+  				firstOrderFilter_caculate(&filter2,DataCollection.Data_bmi.zAngle_total);
+..\task\src\pid_caculate_task.c(65): error:  #20: identifier "m2006_position_pid_FollowChassis" is undefined
+  				pid_caculate_delta(&m2006_position_pid_FollowChassis[i],FloatArray_SetAngle[i],filter2.out/*moto_m2006_info[i].moto_total_angle*/);
+..\task\src\pid_caculate_task.c(66): error:  #20: identifier "m2006_speed_pid_FollowChassis" is undefined
+  				pid_caculate_delta(&m2006_speed_pid_FollowChassis[i],m2006_position_pid_FollowChassis[i].OUT,DataCollection.Data_bmi.zVelocity);
+..\task\src\pid_caculate_task.c(71): error:  #20: identifier "chassis_current_pid" is undefined
+  		set_3508_current(chassis_current_pid[0].OUT,chassis_current_pid[1].OUT,chassis_current_pid[2].OUT,chassis_current_pid[3].OUT);
+..\task\src\pid_caculate_task.c(75): error:  #20: identifier "m2006_speed_pid_FollowChassis" is undefined
+  			set_2006_current(m2006_speed_pid_FollowChassis[0].OUT,m2006_current_pid_FollowChassis[1].OUT);
+..\task\src\pid_caculate_task.c(75): error:  #20: identifier "m2006_current_pid_FollowChassis" is undefined
+  			set_2006_current(m2006_speed_pid_FollowChassis[0].OUT,m2006_current_pid_FollowChassis[1].OUT);
+..\task\src\pid_caculate_task.c: 2 warnings, 12 errors
+compiling frame.c...
+".\Objects\project_example.axf" - 12 Error(s), 2 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.9.0.pack
+                Keil.STM32F4xx_DFP.2.9.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  G:\Keil\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

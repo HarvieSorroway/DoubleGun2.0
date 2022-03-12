@@ -1,0 +1,68 @@
+任务函数文件格式：
+	#include "sometask.h"
+
+	taskCreateStruct sometaskInitStruct; <--------------------- 定义任务初始化结构体		
+		
+	void some_task(void *pvParameters) <----------------------- 你的任务函数内容
+	{
+		for(;;)
+	    {
+			//your task here
+		}
+	
+	}
+	
+	void test_task_Init(void)
+	{
+		sometaskInitStruct.functionPointer = some_task; <------ 初始化结构体：指定任务函数
+		sometaskInitStruct.taskName        = "some_task"; <---- 初始化结构体：指定任务名称
+		sometaskInitStruct.task_STK_Size   = Min_STK_Size; <--- 初始化结构体：指定任务STK大小(使用宏定义)
+	
+		AddInitFunction(testTaskInit); <----------------------- 将初始化结构体挂载到初始化列表中	
+	}
+	
+	任务文件需要包含上面的格式，剩下的可以自行定义
+	任务最大数量仅为20个，如果需要更多，请修改task_manager中的MaxNumOfTask
+	详情可以查看task_manager.h
+	
+其他函数：
+	其他文件中的函数应当统一通过frame.h中的初始化函数进行初始化
+	数据尽量使用frame中的DataCollection进行流通交换。
+	
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+功能函数文件的初始化
+	如果该功能函数自己有中断，可以选择在中断中对DataCollection进行填充。
+	如果需要采用frame.c的DataFilltor的话，需要以下结构：
+	
+	
+	
+	DataFilltor someFunc_filltor;
+	
+	someFunc_Init()
+	{
+		...//该功能函数自己的初始化
+		
+		someFunc_filltor.DataFillPointer  = SomeFunc_DataFilltor;
+		someFunc_filltor.DataSetupPointer = SomeFunc_DataSetup;
+	
+		AddFilltor(someFunc_filltor);
+	}
+	
+	...//该功能函数的其他内容
+	
+	void SomeFunc_DataFilltor(void)
+	{
+		//需要填充的数据
+	}
+	void SomeFunc_DataSetup(void);
+	{
+		//需要初始化的数据
+	}
+	
+	
+	
+	如果不需要其中的某项功能，也一定要把函数定义，可以不写任何功能，但是一定要有定义。
+	SomeFunc_DataFilltor会在frame.c中每5毫秒调用一次。
+	
