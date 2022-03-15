@@ -5,6 +5,8 @@
 
 #include "task_manager.h"
 
+#include "FreeRTOS.h"
+#include "task.h"
 #include "led.h"
 
 void test_task(void *pvParameters);

@@ -59,6 +59,7 @@
 .\objects\task_manager.o: ..\user\algorithm\inc\filters.h
 .\objects\task_manager.o: ..\user\groundwork\inc\pwm.h
 .\objects\task_manager.o: ..\user\groundwork\inc\mecanum.h
+.\objects\task_manager.o: ..\user\groundwork\inc\frame.h
 .\objects\task_manager.o: ..\user\groundwork\inc\gimbal.h
 .\objects\task_manager.o: ..\task\inc\gimbal_task.h
 .\objects\task_manager.o: ..\task\inc\task_manager.h

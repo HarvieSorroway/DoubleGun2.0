@@ -677,11 +677,6 @@
               <FileType>1</FileType>
               <FilePath>..\user\main\src\system_stm32f4xx.c</FilePath>
             </File>
-            <File>
-              <FileName>init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\user\main\src\init.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -691,11 +686,6 @@
               <FileName>bmi_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\task\src\bmi_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>pid_caculate_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\task\src\pid_caculate_task.c</FilePath>
             </File>
             <File>
               <FileName>task_manager.c</FileName>

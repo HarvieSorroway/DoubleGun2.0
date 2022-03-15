@@ -59,10 +59,10 @@
 .\objects\pid_caculate_task.o: ..\user\algorithm\inc\filters.h
 .\objects\pid_caculate_task.o: ..\user\groundwork\inc\pwm.h
 .\objects\pid_caculate_task.o: ..\user\groundwork\inc\mecanum.h
+.\objects\pid_caculate_task.o: ..\user\groundwork\inc\frame.h
 .\objects\pid_caculate_task.o: ..\user\groundwork\inc\gimbal.h
 .\objects\pid_caculate_task.o: ..\task\inc\gimbal_task.h
 .\objects\pid_caculate_task.o: ..\task\inc\task_manager.h
-.\objects\pid_caculate_task.o: ..\user\groundwork\inc\frame.h
 .\objects\pid_caculate_task.o: ..\task\inc\test_task.h
 .\objects\pid_caculate_task.o: ..\task\inc\task_manager.h
 .\objects\pid_caculate_task.o: ..\task\inc\bmi_task.h

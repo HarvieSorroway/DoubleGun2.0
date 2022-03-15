@@ -58,10 +58,10 @@
 .\objects\led.o: ..\user\algorithm\inc\filters.h
 .\objects\led.o: ..\user\groundwork\inc\pwm.h
 .\objects\led.o: ..\user\groundwork\inc\mecanum.h
+.\objects\led.o: ..\user\groundwork\inc\frame.h
 .\objects\led.o: ..\user\groundwork\inc\gimbal.h
 .\objects\led.o: ..\task\inc\gimbal_task.h
 .\objects\led.o: ..\task\inc\task_manager.h
-.\objects\led.o: ..\user\groundwork\inc\frame.h
 .\objects\led.o: ..\task\inc\test_task.h
 .\objects\led.o: ..\task\inc\task_manager.h
 .\objects\led.o: ..\task\inc\bmi_task.h

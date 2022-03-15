@@ -58,10 +58,10 @@
 .\objects\init.o: ..\user\algorithm\inc\filters.h
 .\objects\init.o: ..\user\groundwork\inc\pwm.h
 .\objects\init.o: ..\user\groundwork\inc\mecanum.h
+.\objects\init.o: ..\user\groundwork\inc\frame.h
 .\objects\init.o: ..\user\groundwork\inc\gimbal.h
 .\objects\init.o: ..\task\inc\gimbal_task.h
 .\objects\init.o: ..\task\inc\task_manager.h
-.\objects\init.o: ..\user\groundwork\inc\frame.h
 .\objects\init.o: ..\task\inc\test_task.h
 .\objects\init.o: ..\task\inc\task_manager.h
 .\objects\init.o: ..\task\inc\bmi_task.h

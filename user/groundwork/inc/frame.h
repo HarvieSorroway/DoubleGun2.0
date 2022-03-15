@@ -67,8 +67,13 @@ extern dataCollection DataCollection_lastFrame; 			//上一帧(frametask帧)的数据，
 
 extern DataFilltor Filltors[MaxNumOf_DataSourceCount];
 
-void FrameTask	(void *pvParameters);							//框架任务函数
+void frame_task_init(void);
+void frame_task	(void *pvParameters);							//框架任务函数
+void frame_task_PidDebug(void);
+
 void InitAll	(void);											//初始化
-void AddFilltor	(DataFilltor filltor);							
+void AddFilltor	(DataFilltor filltor);		
+					
+void debug(char * input,int length);
 
 #endif

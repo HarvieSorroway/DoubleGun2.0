@@ -64,7 +64,7 @@
 .\objects\bmi_task.o: ..\middlewares\sys\sys.h
 .\objects\bmi_task.o: ..\user\groundwork\inc\pwm.h
 .\objects\bmi_task.o: ..\user\groundwork\inc\mecanum.h
-.\objects\bmi_task.o: ..\task\inc\task_manager.h
 .\objects\bmi_task.o: ..\user\groundwork\inc\frame.h
+.\objects\bmi_task.o: ..\task\inc\task_manager.h
 .\objects\bmi_task.o: ..\task\inc\test_task.h
 .\objects\bmi_task.o: ..\task\inc\task_manager.h

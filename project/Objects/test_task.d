@@ -60,6 +60,7 @@
 .\objects\test_task.o: ..\user\algorithm\inc\filters.h
 .\objects\test_task.o: ..\user\groundwork\inc\pwm.h
 .\objects\test_task.o: ..\user\groundwork\inc\mecanum.h
+.\objects\test_task.o: ..\user\groundwork\inc\frame.h
 .\objects\test_task.o: ..\user\groundwork\inc\gimbal.h
 .\objects\test_task.o: ..\task\inc\gimbal_task.h
 .\objects\test_task.o: ..\task\inc\task_manager.h

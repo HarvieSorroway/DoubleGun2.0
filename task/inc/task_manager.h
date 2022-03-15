@@ -14,12 +14,11 @@
 
 //任务优先级定义
 #define StartTask_PRIO   1
-#define PIDCaculate_PRIO 2
 
 //任务区块大小设置
 #define	Min_STK_Size     32
 #define	Regular_STK_Size 128
-#define	Big_STK_Size     256
+#define	Large_STK_Size   256
 #define	Max_STK_Size     512
 
 
@@ -29,6 +28,7 @@ typedef struct initLink{
 	char*           taskName;			//函数名称
 	uint16_t        task_STK_Size;		//任务内存大小
 	void (*pidDebugPointer)(void);	//pid调试模式函数指针
+	TaskHandle_t handle;
 } taskCreateStruct;	
 
 

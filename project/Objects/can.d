@@ -58,10 +58,10 @@
 .\objects\can.o: ..\user\algorithm\inc\filters.h
 .\objects\can.o: ..\user\groundwork\inc\pwm.h
 .\objects\can.o: ..\user\groundwork\inc\mecanum.h
+.\objects\can.o: ..\user\groundwork\inc\frame.h
 .\objects\can.o: ..\user\groundwork\inc\gimbal.h
 .\objects\can.o: ..\task\inc\gimbal_task.h
 .\objects\can.o: ..\task\inc\task_manager.h
-.\objects\can.o: ..\user\groundwork\inc\frame.h
 .\objects\can.o: ..\task\inc\test_task.h
 .\objects\can.o: ..\task\inc\task_manager.h
 .\objects\can.o: ..\task\inc\bmi_task.h

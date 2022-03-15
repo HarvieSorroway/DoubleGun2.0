@@ -58,10 +58,10 @@
 .\objects\dbus.o: ..\user\algorithm\inc\filters.h
 .\objects\dbus.o: ..\user\groundwork\inc\pwm.h
 .\objects\dbus.o: ..\user\groundwork\inc\mecanum.h
+.\objects\dbus.o: ..\user\groundwork\inc\frame.h
 .\objects\dbus.o: ..\user\groundwork\inc\gimbal.h
 .\objects\dbus.o: ..\task\inc\gimbal_task.h
 .\objects\dbus.o: ..\task\inc\task_manager.h
-.\objects\dbus.o: ..\user\groundwork\inc\frame.h
 .\objects\dbus.o: ..\task\inc\test_task.h
 .\objects\dbus.o: ..\task\inc\task_manager.h
 .\objects\dbus.o: ..\task\inc\bmi_task.h

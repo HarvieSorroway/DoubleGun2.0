@@ -1,6 +1,5 @@
 .\objects\mecanum.o: ..\user\groundwork\src\mecanum.c
-.\objects\mecanum.o: G:\Keil\ARM\ARMCC\Bin\..\include\math.h
-.\objects\mecanum.o: ..\user\groundwork\inc\frame.h
+.\objects\mecanum.o: ..\user\groundwork\inc\mecanum.h
 .\objects\mecanum.o: ..\user\main\inc\stm32f4xx_conf.h
 .\objects\mecanum.o: ..\fwlib\inc\stm32f4xx_adc.h
 .\objects\mecanum.o: ..\user\main\inc\stm32f4xx.h
@@ -38,6 +37,8 @@
 .\objects\mecanum.o: ..\fwlib\inc\stm32f4xx_dma2d.h
 .\objects\mecanum.o: ..\fwlib\inc\stm32f4xx_fmc.h
 .\objects\mecanum.o: ..\fwlib\inc\stm32f4xx_sai.h
+.\objects\mecanum.o: G:\Keil\ARM\ARMCC\Bin\..\include\math.h
+.\objects\mecanum.o: ..\user\groundwork\inc\frame.h
 .\objects\mecanum.o: ..\freertos\include\FreeRTOS.h
 .\objects\mecanum.o: G:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\mecanum.o: ..\freertos\include\FreeRTOSConfig.h
